@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Attendance Calculator</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'>
+		<link rel="icon" type="image/jpeg" href="favicon.jpg">
+	</head>
+	<body>
+		<img src="logo.png" id="logo">
+		<div id="forum">
+			<h1 id="center">Computing department attendance policy</h1>
+			<p id="center">Calculate your grade with attendance policy calculator below.</p>
+			
+			<form id="calculateAttendance">
+				First name:
+				<input type="text" id="fname" name="firstname">
+				<br>
+				Last name:
+				<input type="text" id="lname" name="lastname">
+				<br>
+				Term:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<select id="term">
+					<option value="100">Fall (100 days)</option>
+					<option value="150">Spring (150 days)</option>
+					<option value="200">Summer (200 days)</option>
+				</select>
+				<br>
+				Days missed:
+				<input id="daysMissed" type="number" min="1" name="daysMissed">
+				<br>
+				Tardies:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<input id="tardies" type="number" min="1" name="tardies">
+				<br>
+				'snow-days' and 'attendance not required':
+				<input id="daysNotRequired" type="number" min="1" name="daysNotRequired">
+			</form>
+			<br>
+			
+			<input onclick="mainFunction()" type="submit" value="submit">
+			<input onclick="resetButton()" type="submit" value="reset">
+
+			<p id="name"></p>
+			<p id="message"></p>
+		</div>
+
+		<script src="mainFunction.js"></script>
+		<script src="resetButton.js"></script>
+	</body>
+</html>
